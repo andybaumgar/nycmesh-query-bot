@@ -21,3 +21,7 @@ This will install the package in "developer mode".  Subsequent changes to the fi
 docker build . -t nycmesh-querybot
 docker run --name nycmesh-querybot --rm -v "$PWD/.env:/app/.env" nycmesh-querybot
 ```
+
+## CI
+- To run multiple runners on the same server (necessary to execute code from different repositories) simply change the folder used for the runner ex. `actions-runner-nycmesh-querybot`
+- To run a GitHub runner as a service, follow the instructions here: https://docs.github.com/en/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service
