@@ -30,7 +30,7 @@ jobs:
         run: | 
           docker stop nycmesh-querybot || true
           docker rm nycmesh-querybot || true
-          docker run -d --name nycmesh-querybot -p 4055/tcp:4055 nycmesh-querybot -e MY_USER=$SLACK_USER_TOKEN
+          docker run -d --name nycmesh-querybot -p 4055:4055 nycmesh-querybot -e MY_USER=$SLACK_USER_TOKEN
       - name: Print startup output
         run: |
           sleep 5
