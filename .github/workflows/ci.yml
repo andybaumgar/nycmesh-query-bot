@@ -19,7 +19,7 @@ jobs:
     runs-on: [self-hosted, daniel-server]
     env: 
       SLACK_USER_TOKEN: ${{ secrets.SLACK_USER_TOKEN }}
-    needs: [Test, Build]
+    needs: [Test]
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Check out repository code
